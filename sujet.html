@@ -1,0 +1,1392 @@
+<!DOCTYPE html>
+<!-- saved from url=(0073)https://www.cril.univ-artois.fr/~hemery/enseignement/An20-21/projetTutS2/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="generator" content="pandoc">
+        <!--  <base href="http://www.cril.univ-artois.fr/~hemery/enseignement/An20-21/pweb2/" /> -->
+    <meta name="author" content="IUT de Lens">
+    <meta name="description" content="Enoncé projet Tutoré du S2.">
+    <title>Projet tutoré Semestre 2</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./sujet_files/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- Font-awesome -->
+    <link rel="stylesheet" href="./sujet_files/font-awesome.min.css">
+<!--    PrimsJs-->
+    <link rel="stylesheet" href="./sujet_files/prism.css" type="text/css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./sujet_files/styleTPPlus.css" type="text/css">
+        <!-- Add favicon here -->
+        <!-- Add site-verifications here -->
+    <style type="text/css">.CtxtMenu_InfoClose {  top:.2em; right:.2em;}
+.CtxtMenu_InfoContent {  overflow:auto; text-align:left; font-size:80%;  padding:.4em .6em; border:1px inset; margin:1em 0px;  max-height:20em; max-width:30em; background-color:#EEEEEE;  white-space:normal;}
+.CtxtMenu_Info.CtxtMenu_MousePost {outline:none;}
+.CtxtMenu_Info {  position:fixed; left:50%; width:auto; text-align:center;  border:3px outset; padding:1em 2em; background-color:#DDDDDD;  color:black;  cursor:default; font-family:message-box; font-size:120%;  font-style:normal; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 15px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius:15px;               /* Safari and Chrome */  -moz-border-radius:15px;                  /* Firefox */  -khtml-border-radius:15px;                /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */  filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color="gray", Positive="true"); /* IE */}
+</style><style type="text/css">.CtxtMenu_MenuClose {  position:absolute;  cursor:pointer;  display:inline-block;  border:2px solid #AAA;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  font-family: "Courier New", Courier;  font-size:24px;  color:#F0F0F0}
+.CtxtMenu_MenuClose span {  display:block; background-color:#AAA; border:1.5px solid;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  line-height:0;  padding:8px 0 6px     /* may need to be browser-specific */}
+.CtxtMenu_MenuClose:hover {  color:white!important;  border:2px solid #CCC!important}
+.CtxtMenu_MenuClose:hover span {  background-color:#CCC!important}
+.CtxtMenu_MenuClose:hover:focus {  outline:none}
+</style><style type="text/css">.CtxtMenu_Menu {  position:absolute;  background-color:white;  color:black;  width:auto; padding:5px 0px;  border:1px solid #CCCCCC; margin:0; cursor:default;  font: menu; text-align:left; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 5px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius: 5px;             /* Safari and Chrome */  -moz-border-radius: 5px;                /* Firefox */  -khtml-border-radius: 5px;              /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */}
+.CtxtMenu_MenuItem {  padding: 1px 2em;  background:transparent;}
+.CtxtMenu_MenuArrow {  position:absolute; right:.5em; padding-top:.25em; color:#666666;  font-family: null; font-size: .75em}
+.CtxtMenu_MenuActive .CtxtMenu_MenuArrow {color:white}
+.CtxtMenu_MenuArrow.CtxtMenu_RTL {left:.5em; right:auto}
+.CtxtMenu_MenuCheck {  position:absolute; left:.7em;  font-family: null}
+.CtxtMenu_MenuCheck.CtxtMenu_RTL { right:.7em; left:auto }
+.CtxtMenu_MenuRadioCheck {  position:absolute; left: .7em;}
+.CtxtMenu_MenuRadioCheck.CtxtMenu_RTL {  right: .7em; left:auto}
+.CtxtMenu_MenuInputBox {  padding-left: 1em; right:.5em; color:#666666;  font-family: null;}
+.CtxtMenu_MenuInputBox.CtxtMenu_RTL {  left: .1em;}
+.CtxtMenu_MenuComboBox {  left:.1em; padding-bottom:.5em;}
+.CtxtMenu_MenuSlider {  left: .1em;}
+.CtxtMenu_SliderValue {  position:absolute; right:.1em; padding-top:.25em; color:#333333;  font-size: .75em}
+.CtxtMenu_SliderBar {  outline: none; background: #d3d3d3}
+.CtxtMenu_MenuLabel {  padding: 1px 2em 3px 1.33em;  font-style:italic}
+.CtxtMenu_MenuRule {  border-top: 1px solid #DDDDDD;  margin: 4px 3px;}
+.CtxtMenu_MenuDisabled {  color:GrayText}
+.CtxtMenu_MenuActive {  background-color: #606872;  color: white;}
+.CtxtMenu_MenuDisabled:focus {  background-color: #E8E8E8}
+.CtxtMenu_MenuLabel:focus {  background-color: #E8E8E8}
+.CtxtMenu_ContextMenu:focus {  outline:none}
+.CtxtMenu_ContextMenu .CtxtMenu_MenuItem:focus {  outline:none}
+.CtxtMenu_SelectionMenu {  position:relative; float:left;  border-bottom: none; -webkit-box-shadow:none; -webkit-border-radius:0px; }
+.CtxtMenu_SelectionItem {  padding-right: 1em;}
+.CtxtMenu_Selection {  right: 40%; width:50%; }
+.CtxtMenu_SelectionBox {  padding: 0em; max-height:20em; max-width: none;  background-color:#FFFFFF;}
+.CtxtMenu_SelectionDivider {  clear: both; border-top: 2px solid #000000;}
+.CtxtMenu_Menu .CtxtMenu_MenuClose {  top:-10px; left:-10px}
+</style><style id="MJX-CHTML-styles">
+mjx-container[jax="CHTML"] {
+  line-height: 0;
+}
+
+mjx-container [space="1"] {
+  margin-left: .111em;
+}
+
+mjx-container [space="2"] {
+  margin-left: .167em;
+}
+
+mjx-container [space="3"] {
+  margin-left: .222em;
+}
+
+mjx-container [space="4"] {
+  margin-left: .278em;
+}
+
+mjx-container [space="5"] {
+  margin-left: .333em;
+}
+
+mjx-container [rspace="1"] {
+  margin-right: .111em;
+}
+
+mjx-container [rspace="2"] {
+  margin-right: .167em;
+}
+
+mjx-container [rspace="3"] {
+  margin-right: .222em;
+}
+
+mjx-container [rspace="4"] {
+  margin-right: .278em;
+}
+
+mjx-container [rspace="5"] {
+  margin-right: .333em;
+}
+
+mjx-container [size="s"] {
+  font-size: 70.7%;
+}
+
+mjx-container [size="ss"] {
+  font-size: 50%;
+}
+
+mjx-container [size="Tn"] {
+  font-size: 60%;
+}
+
+mjx-container [size="sm"] {
+  font-size: 85%;
+}
+
+mjx-container [size="lg"] {
+  font-size: 120%;
+}
+
+mjx-container [size="Lg"] {
+  font-size: 144%;
+}
+
+mjx-container [size="LG"] {
+  font-size: 173%;
+}
+
+mjx-container [size="hg"] {
+  font-size: 207%;
+}
+
+mjx-container [size="HG"] {
+  font-size: 249%;
+}
+
+mjx-container [width="full"] {
+  width: 100%;
+}
+
+mjx-box {
+  display: inline-block;
+}
+
+mjx-block {
+  display: block;
+}
+
+mjx-itable {
+  display: inline-table;
+}
+
+mjx-row {
+  display: table-row;
+}
+
+mjx-row > * {
+  display: table-cell;
+}
+
+mjx-mtext {
+  display: inline-block;
+}
+
+mjx-mstyle {
+  display: inline-block;
+}
+
+mjx-merror {
+  display: inline-block;
+  color: red;
+  background-color: yellow;
+}
+
+mjx-mphantom {
+  visibility: hidden;
+}
+
+_::-webkit-full-page-media, _:future, :root mjx-container {
+  will-change: opacity;
+}
+
+mjx-assistive-mml {
+  position: absolute !important;
+  top: 0px;
+  left: 0px;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 1px 0px 0px 0px !important;
+  border: 0px !important;
+  display: block !important;
+  width: auto !important;
+  overflow: hidden !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+mjx-assistive-mml[display="block"] {
+  width: 100% !important;
+}
+
+mjx-math {
+  display: inline-block;
+  text-align: left;
+  line-height: 0;
+  text-indent: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 100%;
+  font-size-adjust: none;
+  letter-spacing: normal;
+  border-collapse: collapse;
+  word-wrap: normal;
+  word-spacing: normal;
+  white-space: nowrap;
+  direction: ltr;
+  padding: 1px 0;
+}
+
+mjx-container[jax="CHTML"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="CHTML"][display="true"][width="full"] {
+  display: flex;
+}
+
+mjx-container[jax="CHTML"][display="true"] mjx-math {
+  padding: 0;
+}
+
+mjx-container[jax="CHTML"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="CHTML"][justify="right"] {
+  text-align: right;
+}
+
+mjx-mo {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-stretchy-h {
+  display: inline-table;
+  width: 100%;
+}
+
+mjx-stretchy-h > * {
+  display: table-cell;
+  width: 0;
+}
+
+mjx-stretchy-h > * > mjx-c {
+  display: inline-block;
+  transform: scalex(1.0000001);
+}
+
+mjx-stretchy-h > * > mjx-c::before {
+  display: inline-block;
+  width: initial;
+}
+
+mjx-stretchy-h > mjx-ext {
+  /* IE */ overflow: hidden;
+  /* others */ overflow: clip visible;
+  width: 100%;
+}
+
+mjx-stretchy-h > mjx-ext > mjx-c::before {
+  transform: scalex(500);
+}
+
+mjx-stretchy-h > mjx-ext > mjx-c {
+  width: 0;
+}
+
+mjx-stretchy-h > mjx-beg > mjx-c {
+  margin-right: -.1em;
+}
+
+mjx-stretchy-h > mjx-end > mjx-c {
+  margin-left: -.1em;
+}
+
+mjx-stretchy-v {
+  display: inline-block;
+}
+
+mjx-stretchy-v > * {
+  display: block;
+}
+
+mjx-stretchy-v > mjx-beg {
+  height: 0;
+}
+
+mjx-stretchy-v > mjx-end > mjx-c {
+  display: block;
+}
+
+mjx-stretchy-v > * > mjx-c {
+  transform: scaley(1.0000001);
+  transform-origin: left center;
+  overflow: hidden;
+}
+
+mjx-stretchy-v > mjx-ext {
+  display: block;
+  height: 100%;
+  box-sizing: border-box;
+  border: 0px solid transparent;
+  /* IE */ overflow: hidden;
+  /* others */ overflow: visible clip;
+}
+
+mjx-stretchy-v > mjx-ext > mjx-c::before {
+  width: initial;
+  box-sizing: border-box;
+}
+
+mjx-stretchy-v > mjx-ext > mjx-c {
+  transform: scaleY(500) translateY(.075em);
+  overflow: visible;
+}
+
+mjx-mark {
+  display: inline-block;
+  height: 0px;
+}
+
+mjx-c {
+  display: inline-block;
+}
+
+mjx-utext {
+  display: inline-block;
+  padding: .75em 0 .2em 0;
+}
+
+mjx-c::before {
+  display: block;
+  width: 0;
+}
+
+.MJX-TEX {
+  font-family: MJXZERO, MJXTEX;
+}
+
+.TEX-B {
+  font-family: MJXZERO, MJXTEX-B;
+}
+
+.TEX-I {
+  font-family: MJXZERO, MJXTEX-I;
+}
+
+.TEX-MI {
+  font-family: MJXZERO, MJXTEX-MI;
+}
+
+.TEX-BI {
+  font-family: MJXZERO, MJXTEX-BI;
+}
+
+.TEX-S1 {
+  font-family: MJXZERO, MJXTEX-S1;
+}
+
+.TEX-S2 {
+  font-family: MJXZERO, MJXTEX-S2;
+}
+
+.TEX-S3 {
+  font-family: MJXZERO, MJXTEX-S3;
+}
+
+.TEX-S4 {
+  font-family: MJXZERO, MJXTEX-S4;
+}
+
+.TEX-A {
+  font-family: MJXZERO, MJXTEX-A;
+}
+
+.TEX-C {
+  font-family: MJXZERO, MJXTEX-C;
+}
+
+.TEX-CB {
+  font-family: MJXZERO, MJXTEX-CB;
+}
+
+.TEX-FR {
+  font-family: MJXZERO, MJXTEX-FR;
+}
+
+.TEX-FRB {
+  font-family: MJXZERO, MJXTEX-FRB;
+}
+
+.TEX-SS {
+  font-family: MJXZERO, MJXTEX-SS;
+}
+
+.TEX-SSB {
+  font-family: MJXZERO, MJXTEX-SSB;
+}
+
+.TEX-SSI {
+  font-family: MJXZERO, MJXTEX-SSI;
+}
+
+.TEX-SC {
+  font-family: MJXZERO, MJXTEX-SC;
+}
+
+.TEX-T {
+  font-family: MJXZERO, MJXTEX-T;
+}
+
+.TEX-V {
+  font-family: MJXZERO, MJXTEX-V;
+}
+
+.TEX-VB {
+  font-family: MJXZERO, MJXTEX-VB;
+}
+
+mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
+  font-family: MJXZERO, MJXTEX-S1, MJXTEX-S4, MJXTEX, MJXTEX-A ! important;
+}
+
+@font-face /* 0 */ {
+  font-family: MJXZERO;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Zero.woff") format("woff");
+}
+
+@font-face /* 1 */ {
+  font-family: MJXTEX;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Main-Regular.woff") format("woff");
+}
+
+@font-face /* 2 */ {
+  font-family: MJXTEX-B;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Main-Bold.woff") format("woff");
+}
+
+@font-face /* 3 */ {
+  font-family: MJXTEX-I;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Math-Italic.woff") format("woff");
+}
+
+@font-face /* 4 */ {
+  font-family: MJXTEX-MI;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Main-Italic.woff") format("woff");
+}
+
+@font-face /* 5 */ {
+  font-family: MJXTEX-BI;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Math-BoldItalic.woff") format("woff");
+}
+
+@font-face /* 6 */ {
+  font-family: MJXTEX-S1;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size1-Regular.woff") format("woff");
+}
+
+@font-face /* 7 */ {
+  font-family: MJXTEX-S2;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size2-Regular.woff") format("woff");
+}
+
+@font-face /* 8 */ {
+  font-family: MJXTEX-S3;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size3-Regular.woff") format("woff");
+}
+
+@font-face /* 9 */ {
+  font-family: MJXTEX-S4;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size4-Regular.woff") format("woff");
+}
+
+@font-face /* 10 */ {
+  font-family: MJXTEX-A;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_AMS-Regular.woff") format("woff");
+}
+
+@font-face /* 11 */ {
+  font-family: MJXTEX-C;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Regular.woff") format("woff");
+}
+
+@font-face /* 12 */ {
+  font-family: MJXTEX-CB;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Bold.woff") format("woff");
+}
+
+@font-face /* 13 */ {
+  font-family: MJXTEX-FR;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Fraktur-Regular.woff") format("woff");
+}
+
+@font-face /* 14 */ {
+  font-family: MJXTEX-FRB;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Fraktur-Bold.woff") format("woff");
+}
+
+@font-face /* 15 */ {
+  font-family: MJXTEX-SS;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Regular.woff") format("woff");
+}
+
+@font-face /* 16 */ {
+  font-family: MJXTEX-SSB;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Bold.woff") format("woff");
+}
+
+@font-face /* 17 */ {
+  font-family: MJXTEX-SSI;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Italic.woff") format("woff");
+}
+
+@font-face /* 18 */ {
+  font-family: MJXTEX-SC;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Script-Regular.woff") format("woff");
+}
+
+@font-face /* 19 */ {
+  font-family: MJXTEX-T;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Typewriter-Regular.woff") format("woff");
+}
+
+@font-face /* 20 */ {
+  font-family: MJXTEX-V;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Vector-Regular.woff") format("woff");
+}
+
+@font-face /* 21 */ {
+  font-family: MJXTEX-VB;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Vector-Bold.woff") format("woff");
+}
+
+mjx-c.mjx-c27F6::before {
+  padding: 0.511em 1.638em 0.011em 0;
+  content: "\27F6";
+}
+</style></head>
+<body>
+<!-- anything you put here will go before the opening <body> tag
+     (ie: before the README’s contents) Markdown will become HTML  -->
+<div class="container">
+    <div class="row">
+            <div class="jumbotron col-xl-10">
+                    <h1 class="title">Projet tutoré Semestre 2</h1>
+                                    <p class="author">IUT de Lens</p>
+                                    <p class="date">Avril ― Juin 2021</p>
+                            </div>
+    </div>
+        <div class="row">
+        <div class="col-xl-10"><section id="introduction" class="container">
+<h2>Introduction</h2>
+<div class="row">
+<div class="col">
+<h3 id="présentation-du-jeu-labyrinthe">Présentation du jeu Labyrinthe</h3>
+<p>Le jeu <strong>Labyrinthe</strong> est un jeu de plateau proposé par la société <a href="https://www.ravensburger.fr/d%C3%A9couvrir/nos-marques/le-monde-palpitant-du-labyrinthe/index.html">Ravensburger</a> .</p>
+<p>Voici le paragraphe de présentation par la société <em>Ravensburger</em> :</p>
+<div class="blockquote">
+<p>"Une palpitante chasse aux trésors dans un labyrinthe en mouvement ! Un dédale de couloirs que l'on décale à sa guise, pour retrouver le plus de trésors et de secrets possible. Le plus adroit à déplacer les couloirs sera le gagnant. Qui arrivera à déjouer les pièges de ce célèbre labyrinthe et être le premier à récolter ses fabuleux trésors ? Un jeu de stratégie et de suspense pour toute la famille qui fait désormais partie des grands classiques."</p>
+</div>
+<h3 id="les-éléments-du-jeu">Les éléments du jeu</h3>
+<ul>
+<li>Le plateau représente une grille de 7 cases sur 7 cases. <img src="./sujet_files/plateau.png" height="300px"></li>
+<li>Chaque case de la grille sera occupée par une pièce du labyrinthe.</li>
+<li>Il y a 3 modèles de pièce et chaque pièce peut avoir une orientation particulière.
+<ul>
+<li>20 pièces du modèle 0, <img src="./sujet_files/modele0.png" height="60px"></li>
+<li>12 pièces du modèle 1 et <img src="./sujet_files/modele1.png" height="60px"></li>
+<li>18 pièces du modèle 2. <img src="./sujet_files/modele2.png" height="60px"> <img src="./sujet_files/orientationPiece.png" width="800px"></li>
+</ul></li>
+<li>Il y a 50 pièces au total</li>
+<li>Il y a 18 objets qui représentent les "<em>trésors</em>" à récupérer.</li>
+<li>Chaque objet est placé dans la grille (1 objet au plus par case).</li>
+<li>Le jeu oppose de 2 à 3 joueurs.</li>
+<li>Chaque joueur se situe sur une case de la grille.</li>
+</ul>
+<h3 id="le-déroulement-du-jeu">Le déroulement du jeu</h3>
+<h4 id="début-de-partie">Début de partie</h4>
+<ul>
+<li>49 pièces sont placées et orientées aléatoirement dans la grille. La dernière pièce est laissée de côté et sera utilisée par le joueur dont c'est le tour de jouer.</li>
+<li>Les 18 objets sont placés aléatoirement dans la grille.</li>
+<li>Chaque joueur est placé dans la grille :
+<ul>
+<li>Le joueur 0 sur la case (0,0),</li>
+<li>Le joueur 1 sur la case (0,6),</li>
+<li>Le joueur 2 sur la case (6,6).</li>
+</ul></li>
+<li>Chaque joueur se voit attribué une liste ordonnée d'objets qu'il doit récupérer :
+<ul>
+<li>6 par joueur s’il y a 3 joueurs et</li>
+<li>9 par joueur s’il y a 2 joueurs,</li>
+<li>chaque objet doit être récupéré dans l'ordre de la liste. <img src="./sujet_files/debutPartie.png" height="300px"></li>
+</ul></li>
+<li>Chaque joueur sera un joueur humain ou simulé par le programme (l'ordinateur).</li>
+</ul>
+<h4 id="déroulement-de-la-partie">Déroulement de la partie</h4>
+<p>L'objectif de chacun des joueurs est de ramasser la liste des objets attribués en début de partie. Une fois le jeu initialisé les joueurs jouent à tour de rôle, toujours dans le même ordre : joueur 0, joueur 1 puis joueur 2.</p>
+<p>Quand un joueur joue il effectue les opérations suivantes :</p>
+<ul>
+<li>Il oriente la pièce libre de la manière qu'il souhaite.</li>
+<li>Il choisit une ligne ou une colonne.</li>
+<li>Il choisit une case d'entrée pour la ligne (la case la plus à gauche ou la case la plus à droite) ou pour la colonne ( la case la plus haute ou la case la plus basse).</li>
+<li>Il introduit la pièce libre par la case d'entrée en faisant coulisser les pièces de la ligne ou de la colonne.</li>
+<li>Il se déplace sur le plateau à travers un chemin possible dans le labyrinthe en choisissant une case d'arrivée.</li>
+<li>S'il arrive sur la case contenant l'objet qu'il doit récupérer, il récupère cet objet et son prochain objectif sera l'objet suivant dans sa liste d'objets à récupérer. Dans le cas où il n'a plus d'objets à récupérer il a gagné.</li>
+<li>On passe au joueur suivant.</li>
+</ul>
+<p>Un exemple de déroulement d'un tour pour un joueur :</p>
+<div style="display: flex; justify-content: space-around">
+  <img src="./sujet_files/tour1.png" title="orientation et entrée" alt="orientation et entrée" width="300">
+  <img src="./sujet_files/tour2.png" title="Déplacement des pièces avant" alt="Déplacement des pièces avant" width="300">
+  <img src="./sujet_files/tour3.png" title="Déplacement des pièces après" alt="Déplacement des pièces après" width="300">
+</div>
+<ul>
+<li>Les objets et les joueurs placés sur une ligne ou une colonne qui est déplacée suivent le déplacement.</li>
+<li>Si des objets ou des joueurs sont expulsés du plateau ils sont remis sur le plateau par la case opposée de celle où ils sont sortis.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="sujet" class="container">
+<h2>Sujet</h2>
+<div class="row">
+<div class="col">
+<p>Le projet consiste à réaliser le jeu labyrinthe qui a été présenté dans la section précédente. Pour cela vous utiliserez le langage java et plus spécifiquement la librairie graphique swing pour l'interface graphique. Un joueur pourra être un humain ou un programme.</p>
+<p>La réalisation va se faire en plusieurs étapes.</p>
+<ol>
+<li>Étape 1 : Prise en main de la librairie graphique mise à votre disposition.</li>
+<li>Étape 2 : Implémentation des pièces du jeu</li>
+<li>Étape 3 : Implémentation des objets et du plateau de jeu</li>
+<li>Étape 4 : Implémentation de la classe <code>Joueur</code></li>
+<li>Étape 5 : Implémentation d'une première version du jeu !</li>
+<li>Étape 6 : Développement de joueurs "<em>ordinateur</em>"</li>
+</ol>
+</div>
+</div>
+</section>
+<section id="prologue-développement" class="container">
+<h2>Prologue Développement</h2>
+<h3 id="modification-de-la-librairie-ig">Modification de la librairie IG</h3>
+<ul>
+<li>Le 5 mai 2021 : Une version 20 de la librairie IG <a href="https://www.cril.univ-artois.fr/~hemery/enseignement/An20-21/projetTutS2/data/libIG20.jar"><code>libIG20.jar</code></a> est téléchargeable <a href="https://www.cril.univ-artois.fr/~hemery/enseignement/An20-21/projetTutS2/data/libIG20.jar">ici</a>.</li>
+<li>Le 18 mai 2021 : Une version 22 de la librairie IG <a href="https://www.cril.univ-artois.fr/~hemery/enseignement/An20-21/projetTutS2/data/libIG22.jar"><code>libIG22.jar</code></a> est téléchargeable <a href="https://www.cril.univ-artois.fr/~hemery/enseignement/An20-21/projetTutS2/data/libIG22.jar">ici</a>.</li>
+<li>Le 19 mai 2021 : Une version 23 de la librairie IG <a href="https://www.cril.univ-artois.fr/~hemery/enseignement/An20-21/projetTutS2/data/libIG23.jar"><code>libIG23.jar</code></a> est téléchargeable <a href="https://www.cril.univ-artois.fr/~hemery/enseignement/An20-21/projetTutS2/data/libIG23.jar">ici</a>.</li>
+<li>Le 19 mai 2021 : Une version 24 de la librairie IG <a href="https://www.cril.univ-artois.fr/~hemery/enseignement/An20-21/projetTutS2/data/libIG24.jar"><code>libIG24.jar</code></a> est téléchargeable <a href="https://www.cril.univ-artois.fr/~hemery/enseignement/An20-21/projetTutS2/data/libIG24.jar">ici</a>.</li>
+</ul>
+<div class="row">
+<div class="col">
+
+</div>
+</div>
+</section>
+<section id="etape-1-prise-en-main-de-la-librairie-graphique" class="container">
+<h2>Etape 1 : Prise en main de la librairie graphique</h2>
+<div class="row">
+<div class="col">
+<h3 id="contexte">Contexte</h3>
+<p>Dans la mise en œuvre du jeu Labyrinthe vous utiliserez une librairie graphique permettant d'ouvrir des fenêtres de paramétrage du jeu ainsi qu'une fenêtre de jeu correspondant au plateau du jeu.</p>
+<p>Cette librairie est constituée d'un ensemble de classes Java compilées et rassemblées dans un fichier appelé <a href="https://www.cril.univ-artois.fr/~hemery/enseignement/An20-21/projetTutS2/data/libIG19.jar"><code>libIG19.jar</code></a>. Afin d'utiliser cette librairie, vous devrez devoir dans un premier temps l'inclure dans l'ensemble des librairies externes de votre projet Java (quel que soit l'environnement de programmation utilisé).</p>
+<p>Une fois la librairie incluse, vous pourrez utiliser dans vos programmes les différentes méthodes publiques de la classe <code>IG</code>. Toutes ces méthodes sont des méthodes statiques (méthodes de classe). Une documentation HTML de ces méthodes se trouve dans l'archive <a href="https://www.cril.univ-artois.fr/~hemery/enseignement/An20-21/projetTutS2/data/docIG19.zip"><code>docIG19.zip</code></a>.</p>
+<p>D'autre part, le fichier source <a href="https://www.cril.univ-artois.fr/~hemery/enseignement/An20-21/projetTutS2/data/DemoIG19.java"><code>DemoIG19.java</code></a> contient un exemple d'utilisation de ces méthodes.</p>
+<h3 id="objectifs">Objectifs</h3>
+<p>Les objectifs principaux seront :</p>
+<ul>
+<li>de créer votre projet Java dans un environnement de programmation Java choisi par votre groupe projet,</li>
+<li>de vous familiariser avec la librairie graphique proposée,</li>
+<li>d'utiliser un dépôt git pour partager votre travail.</li>
+</ul>
+<h3 id="activités">Activités</h3>
+<h4 class="activite" id="choix-dun-environnement-de-développement">Choix d'un environnement de développement</h4>
+<p>La pièce maitresse de votre environnement de développement est votre Environnement de Développement Intégré (IDE) encore appelé IDE (<em>Integrated Development Environment</em>) en anglais. Il est important que chaque membre du projet utilise le même IDE afin de pouvoir partager plus facilement le travail réalisé.</p>
+<p>Comme IDE on peut citer :</p>
+<ul>
+<li><a href="https://www.eclipse.org/ide/">Eclipse</a></li>
+<li><a href="https://www.jetbrains.com/fr-fr/idea/">IntelliJ IDEA</a></li>
+<li><a href="https://code.visualstudio.com/">Visual Studio Code</a></li>
+</ul>
+<p>Une fois l'IDE choisi, créez un projet Java portant le nom <code>Labyrinthe</code>.</p>
+<h4 class="activite" id="intégration-de-la-librairie-graphique-ig-dans-votre-projet">Intégration de la librairie graphique <code>IG</code> dans votre projet</h4>
+<p>Dans la suite du développement de votre application, vous allez utiliser les classes et fonctions proposées dans la librairie <code>IG</code>. Cette librairie se présente sous la forme d'une archive au format jar (<strong>J</strong>ava <strong>AR</strong>chive).</p>
+<p>Pour développer et tester votre travail, vous aurez besoin d'intégrer la librairie dans votre IDE.</p>
+<h5 id="intégration-de-la-librairie-ig-avec-eclipse">Intégration de la librairie <code>IG</code> avec Eclipse</h5>
+<p>Voici les étapes à suivre pour intégrer une librairie dans Eclipse :</p>
+<ol>
+<li>Réalisez un glisser-déposer du fichier <a href="https://www.cril.univ-artois.fr/~hemery/enseignement/An20-21/projetTutS2/data/libIG19.jar"><code>libIG19.jar</code></a> de votre gestionnaire de fichiers vers votre projet Labyrinthe.
+<div>
+    <img src="./sujet_files/Capture1.png" width="400px">
+    <img src="./sujet_files/Capture2.png" width="400px">
+</div></li>
+<li>Afin que les classes présentes dans le fichier <a href="https://www.cril.univ-artois.fr/~hemery/enseignement/An20-21/projetTutS2/data/libIG19.jar"><code>libIG19.jar</code></a> soient prises en compte lors de la compilation de vos programmes, ajoutez cette librairie au <em>Build Path</em> à partir du menu contextuel qui s'ouvre après avoir cliqué sur le fichier importé.
+<div>
+    <img src="./sujet_files/Capture3.png" width="400px">
+    <img src="./sujet_files/Capture4.png" width="400px">
+</div>
+La librairie <code>IG</code> peut maintenant être utilisée.</li>
+</ol>
+<h5 id="intégration-de-la-librairie-ig-avec-intellij-idea">Intégration de la librairie <code>IG</code> avec Intellij IDEA</h5>
+<p>Voici les étapes à suivre pour intégrer une librairie dans Intellij IDEA</p>
+<ol>
+<li>Sélectionnez <em>File <span class="math inline"><mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="0" style="font-size: 113.1%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c27F6"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false">⟶</mo></math></mjx-assistive-mml></mjx-container></span> Project structure</em> dans le menu, une fenêtre s'ouvre, sélectionnez Libraries.
+<div>
+    <img src="./sujet_files/CaptureIDEA1.png" width="400px">
+    <img src="./sujet_files/CaptureIDEA2.png" width="400px">
+</div></li>
+<li>Cliquez sur '+' et sélectionnez Java
+<div>
+    <img src="./sujet_files/CaptureIDEA3.png" width="400px">
+</div></li>
+<li>Retrouvez le fichier <a href="https://www.cril.univ-artois.fr/~hemery/enseignement/An20-21/projetTutS2/data/libIG19.jar"><code>libIG19.jar</code></a> contenant la librairie sur votre disque local.</li>
+</ol>
+<p>La librairie <code>IG</code> peut maintenant être utilisée.</p>
+<h4 class="activite" id="tester-votre-environnement">Tester votre environnement</h4>
+<p>Dans votre projet Java, créez un paquetage appelé <code>tests</code> dans lequel vous placerez le fichier <a href="https://www.cril.univ-artois.fr/~hemery/enseignement/An20-21/projetTutS2/data/DemoIG19.java">DemoIG19.java</a>. Exécutez le programme correspondant à la classe <code>DemoIG19</code>.</p>
+<h4 class="activite" id="création-dun-programme-qui-utilise-la-librairie-ig">Création d'un programme qui utilise la librairie <code>IG</code></h4>
+<p>En examinant la documentation de la classe IG et en vous inspirant de la classe <code>DemoIG19</code> vous allez devoir écrire un programme ouvrant une fenêtre de jeu et réalisant certaines opérations. Ce programme correspondra à la classe <code>MaDemoIG</code> qui devra être ajoutée au paquetage <code>tests</code>. La méthode <code>main</code> sera la seule méthode présente dans cette classe.</p>
+<ol>
+<li>Dans un premier temps, les paramètres du jeu seront saisis. Dans la suite nous supposerons que les paramètres par défaut ont été saisis par l'utilisateur.
+<div>
+<img src="./sujet_files/JeuCapture1.png" width="400px">
+<img src="./sujet_files/JeuCapture2.png" width="400px">
+</div></li>
+<li>Une fois les paramètres saisis, le programme ouvrira la fenêtre de jeu avec une configuration initiale similaire à la capture d'écran suivante.
+<div>
+<img src="./sujet_files/JeuCapture3.png" width="600px">
+</div>
+Le nombre de joueurs, les noms des joueurs, les images des joueurs, les types des joueurs sont affichés en fonction des paramètres saisis.
+<ul>
+<li>Les objets des joueurs sont affichés en suivant l'ordre de leur numéro :
+<ul>
+<li>l'objet 0 se trouve en position 0 pour le joueur 0,</li>
+<li>l'objet 1 se trouve en position 1 pour le joueur 0, …</li>
+</ul></li>
+<li>Le plateau ne contient que des pièces du modèle 2 et de type 0.</li>
+<li>La pièce hors plateau est de modèle 1 et de type 0.</li>
+<li>Les objets sont répartis sur le plateau dans l'ordre, l'objet 0 sur la première case, l'objet 1 sur la deuxième case, ...</li>
+<li>Le premier joueur est placé sur la ligne du milieu à gauche du plateau, tandis que le deuxième joueur est placé sur la ligne du milieu à droite du plateau.</li>
+<li>L'éventuel troisième joueur n'est pas présent sur le plateau.</li>
+<li>Un message contenant "Bonjour !" et "Cliquez pour continuer …" est affiché.</li>
+<li>Une fois la fenêtre de jeu ouverte, le programme attend un clic de souris de l'utilisateur.</li>
+</ul></li>
+<li>Une fois la fenêtre de jeu ouverte. L'utilisateur cliquera 4 fois.
+<ul>
+<li>À chaque clic de souris, toutes les pièces du plateau et celle hors plateau effectueront une rotation à droite (pour chaque pièce, le modèle ne change pas mais le type passe au type suivant).
+<ul>
+<li>Les deux joueurs se déplacent vers le centre du plateau d'un cran.</li>
+<li>À chaque déplacement, une bille de type 0 sera placée à l'ancienne position des joueurs.</li>
+</ul></li>
+<li>Un message contenant "Après le clic 1" (puis, "Après le clic 2", "Après le clic 3" et "Après le clic 4") et "Cliquez pour continuer ..." est affiché.</li>
+<li>Au fur et à mesure des 4 clics, les premiers objets sont enlevés du plateau et mis en transparence au niveau du premier joueur (l'objet 0 pour le premier clic, l'objet 1 pour le deuxième clic, ...).</li>
+<li>Après les 4 clics, le programme attendra un nouveau clic de souris de l'utilisateur pour poursuivre son exécution.
+<div>
+<img src="./sujet_files/JeuCapture4.png" width="400px">
+<img src="./sujet_files/JeuCapture5.png" width="400px">
+</div>
+<div>
+<img src="./sujet_files/JeuCapture6.png" width="400px">
+<img src="./sujet_files/JeuCapture7.png" width="400px">
+</div></li>
+</ul></li>
+<li>Après un clic, une fenêtre indiquant le premier joueur comme gagnant est ouverte. Le programme attend un clic sur une flèche et s'arrête après une attente de 2 secondes.
+<div>
+<img src="./sujet_files/JeuCapture8.png" width="400px">
+<img src="./sujet_files/JeuCapture9.png" width="400px">
+</div></li>
+</ol>
+<h4 class="activite" id="choix-dun-thème">Choix d'un thème</h4>
+<p>Lors du paramétrage du jeu, un thème doit être sélectionné par l'utilisateur. L'activité consiste à la création de votre thème qui sera incorporé dans une future version de la librairie graphique. Pour cela vous devez créer deux fichiers :</p>
+<ul>
+<li><code>sprites_theme.png</code> et</li>
+<li><code>infos_theme.txt</code>.</li>
+</ul>
+<p>Le premier fichier devra contenir les sprites utilisés par la librairie graphique pour le thème proposé. Il devra suivre le modèle correspondant au fichier <a href="https://www.cril.univ-artois.fr/~hemery/enseignement/An20-21/projetTutS2/data/sprites_theme_modele.png"><code>sprites_theme_modele.png</code></a>.</p>
+<div>
+<img src="./sujet_files/sprites_theme_modele.png" width="500px">
+</div>
+<p>Le fichier <code>infos_theme.txt</code> contiendra trois lignes :</p>
+<ol>
+<li><p>La première ligne contiendra le nom de votre thème (exemple : Thème Pokemon),</p></li>
+<li><p>La deuxième ligne contiendra la liste de vos prénoms et noms (exemple : JF. Condotta, F. Hemery, A. Chmeiss),</p></li>
+<li><p>La troisième ligne contiendra le liste des noms des objets avec la syntaxe suivante</p>
+<pre class="{.} language-text"><code class=" language-text">{"nomObjet0","nomObjet1",...,"nomObjet17"} </code></pre>
+<p>par exemple :</p>
+<pre class="{.} language-text"><code class=" language-text">{"Grappe De Raisin","Bananes","Pomme Rouge",...,"Chou Rouge","Poire"}).</code></pre></li>
+</ol>
+<h3 class="a-rendre" id="travail-à-rendre">Travail à rendre</h3>
+<p>Sous Moodle, dans la section <strong>Projet Tutoré S2</strong> vous devez déposer les fichiers suivants (un seul étudiant par groupe effectuera les dépôts du début à la fin du projet) :</p>
+<ol>
+<li>Dans le dépôt <strong>Etape1</strong> :
+<ul>
+<li>Déposez les fichiers <code>MaDemoIG.java</code>, <code>sprites_theme.png</code> et <code>infos_theme.txt</code>.</li>
+<li>Avant le <strong>lundi 26 avril 2021 (23h)</strong>.</li>
+</ul></li>
+</ol>
+</div>
+</div>
+</section>
+<section id="étape-2-implémentation-des-pièces-du-jeu" class="container">
+<h2>Étape 2 : Implémentation des pièces du jeu</h2>
+<div class="row">
+<div class="col">
+<h3 id="contexte-1">Contexte</h3>
+<p>Le développement du jeu va vous conduire à implémenter des classes permettant la représentation des différents composants du jeu et la définition de traitements associés. Vous implémenterez notamment des classes correspondant aux pièces du jeu, au plateau du jeu, aux joueurs, à une partie, ...</p>
+<h3 id="objectifs-1">Objectifs</h3>
+<p>L'étape 2 du projet a comme objectif principal l'implémentation de classes représentant les pièces du jeu.</p>
+<h3 id="activités-1">Activités</h3>
+<h4 class="activite" id="la-classe-utils">La classe <code>Utils</code></h4>
+<p>Dans votre projet Java Labyrinthe, créez un paquetage appelé <code>composants</code> et placez-y le fichier <a href="https://www.cril.univ-artois.fr/~hemery/enseignement/An20-21/projetTutS2/data/Utils.java"><code>Utils.java</code></a>. La classe <code>Utils</code> contient deux méthodes statiques que vous devez compléter.</p>
+<p>En première ligne de commentaire de chaque méthode à compléter ou à modifier se trouve une ligne de la forme :</p>
+<ul>
+<li><p>À Faire (Quand Qui Statut).</p>
+<p>Cette ligne de commentaire devra être modifiée au cours du développement pour indiquer</p>
+<ul>
+<li>la date de la dernière mise à jour de son code (Quand),</li>
+<li>les initiales de la personne ou des personnes qui ont effectué cette dernière mise à jour (Qui) et</li>
+<li>le statut du code de la méthode (Statut) qui pourra être le mot EnCours ou le mot Finalisée.</li>
+</ul>
+<p>À titre d'exemple, à un moment donné une telle ligne pourra être :</p>
+<pre class="{.} language-text"><code class=" language-text">À Faire (11/04/21 JFC EnCours)</code></pre>
+<p>puis à un autre moment :</p>
+<pre class="{.} language-text"><code class=" language-text">À Faire (11/04/21 JFC Finalisée)</code></pre></li>
+</ul>
+<p>Exécutez la classe <code>Utils</code> une fois qu'elle est complétée et tester ses méthodes. Son exécution doit produire un affichage de la forme suivante :</p>
+<pre class="{.} language-text"><code class=" language-text">11 7 12 0 8 13 16 4 1 2 14 5 3 6 9 10 17 15</code></pre>
+<h4 class="activite" id="les-pièces-du-jeu">Les pièces du jeu</h4>
+<p>Ajoutez au paquetage <code>composants</code> les quatre fichiers :</p>
+<ul>
+<li><a href="https://www.cril.univ-artois.fr/~hemery/enseignement/An20-21/projetTutS2/data/Piece.java"><code>Piece.java</code></a>,</li>
+<li><a href="https://www.cril.univ-artois.fr/~hemery/enseignement/An20-21/projetTutS2/data/PieceM0.java"><code>PieceM0.java</code></a>,</li>
+<li><a href="https://www.cril.univ-artois.fr/~hemery/enseignement/An20-21/projetTutS2/data/PieceM1.java"><code>PieceM1.java</code></a> et</li>
+<li><a href="https://www.cril.univ-artois.fr/~hemery/enseignement/An20-21/projetTutS2/data/PieceM2.java"><code>PieceM2.java</code></a>.</li>
+</ul>
+<p>La classe <code>Piece</code> est une classe abstraite permettant de représenter une pièce du jeu Labyrinthe. <code>PieceM0</code>, <code>PieceM1</code> , <code>PieceM2</code> sont trois sous-classes concrètes de <code>Piece</code> permettant de représenter respectivement une pièce de modèle 0, une pièce de modèle 1 et une pièce de modèle 2.</p>
+<p>En examinant la classe <code>Piece</code> vous remarquerez que chaque objet de la classe <code>Piece</code> possède trois attributs :</p>
+<ul>
+<li><code>modelePiece</code> (le modèle de la pièce),</li>
+<li><code>orientationPiece</code> (l'orientation de la pièce) et</li>
+<li><code>pointsEntree</code> (un tableau indiquant les points d'entrée sur la pièce).</li>
+</ul>
+<p>Pour être plus précis, <code>pointsEntree</code> est un tableau de quatre booléens avec</p>
+<ul>
+<li>la première case de ce tableau qui indique s'il existe (<code>true</code>) ou pas (<code>false</code>) une entrée par le haut pour se rendre sur la pièce,</li>
+<li>la deuxième case de ce tableau qui indique s'il existe (<code>true</code>) ou pas (<code>false</code>) une entrée par la droite pour se rendre sur la pièce,</li>
+<li>la troisième case de ce tableau qui indique s'il existe (<code>true</code>) ou pas (<code>false</code>) une entrée par le bas pour se rendre sur la pièce et</li>
+<li>la dernière case de ce tableau qui indique s'il existe (<code>true</code>) ou pas (<code>false</code>) une entrée par la gauche pour se rendre sur la pièce.</li>
+</ul>
+<p>Par exemple, une pièce de modèle 0 et d'orientation 1 aura comme <code>pointsEntree</code> le tableau {<code>false</code>,<code>false</code>,<code>true</code> ,<code>true</code>}.</p>
+<p>Pour cette deuxième activité vous devez compléter les quatre classes <code>Piece</code>, <code>PieceM0</code>, <code>PieceM1</code> et <code>PieceM2</code>.</p>
+<h4 class="activite" id="tester-les-classes-pièces-du-jeu">Tester les classes pièces du jeu</h4>
+<p>Nous allons maintenant tester les classes précédentes. Dans le paquetage <code>tests</code> créez une nouvelle classe appelée <code>TestPieces</code>. La méthode <code>main</code> sera la seule méthode présente dans cette classe. Son exécution permettra les affichages/actions suivantes :</p>
+<ol>
+<li><p>Dans un premier temps, les paramètres du jeu seront saisis. Dans la suite nous supposerons que les paramètres par défaut ont été saisis par l'utilisateur.</p>
+<div>
+   <img src="./sujet_files/EcranJeu1.png" width="400px">
+   <img src="./sujet_files/EcranJeu2.png" width="400px">
+</div></li>
+<li><p>Une fois les paramètres saisis, le programme ouvrira la fenêtre de jeu avec une configuration initiale correspondant à un affichage par défaut sauf pour le message affiché qui sera "Cliquez pour continuer ...". Le programme attendra un clic de souris de l'utilisateur.</p>
+<div>
+<img src="./sujet_files/E2Capture1.png" width="600px">
+</div></li>
+<li><p>Puis, le programme générera à l'aide de la méthode <code>Piece.nouvellesPieces</code> un tableau de 50 pièces. Les 49 premières pièces de ce tableau seront disposées sur le plateau dans l'ordre (la première pièce sera placée sur la première case de la première ligne, la deuxième pièce sera placée sur la deuxième case de la première ligne, ...). La dernière pièce du tableau (celle à l'indice 49) sera placée dans l'emplacement de la fenêtre correspondant à la pièce hors du plateau. Le programme affichera cette nouvelle configuration dans la fenêtre de jeu et attendra de nouveau un clic de l'utilisateur.</p>
+<div>
+<img src="./sujet_files/E2Capture2.png" width="600px">
+</div></li>
+<li><p>Dans la suite de l'exécution du programme, l'utilisateur cliquera 4 fois. Après chaque clic, l'ensemble des pièces du tableau sont rotationnées puis de nouveau affichées. De plus, la représentation sous forme de chaîne de caractères de la pièce hors plateau est affichée dans la console après chaque clic. Le programme s'arrêtera après un cinquième clic de l'utilisateur.</p>
+<div>
+   <img src="./sujet_files/E2Capture3.png" width="400px">
+   <img src="./sujet_files/E2Capture4.png" width="400px">
+</div>
+<div>
+   <img src="./sujet_files/E2Capture5.png" width="400px">
+   <img src="./sujet_files/E2Capture6.png" width="400px">
+</div>
+<p>L'affichage dans la Console est similaire au suivant :</p>
+<pre class="{.text}"><code>[m:2|o:2|pe:false true true true]
+[m:2|o:3|pe:true false true true]
+[m:2|o:0|pe:true true false true]
+[m:2|o:1|pe:true true true false]</code></pre></li>
+</ol>
+<h4 class="activite" id="génération-de-la-documentation-html">Génération de la documentation HTML</h4>
+<p>Générez la documentation HTML des classes de votre projet Labyrinthe à l'aide de l'utilitaire Javadoc.</p>
+<p>Cette documentation devra se trouver dans un dossier <code>doc</code> de votre projet.</p>
+<h5 id="ide-eclipse">IDE Eclipse</h5>
+<p>Après avoir cliqué sur votre projet Java, ouvrez l'entrée du menu <strong>Project <span class="math inline"><mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="1" style="font-size: 113.1%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c27F6"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false">⟶</mo></math></mjx-assistive-mml></mjx-container></span> Generate Javadoc</strong> ...</p>
+<div>
+   <img src="./sujet_files/E2Capture1-1.png" width="400px">
+   <img src="./sujet_files/E2Capture2-1.png" width="400px">
+</div>
+<div>
+   <img src="./sujet_files/E2Capture3-1.png" width="400px">
+</div>
+<h5 id="ide-intellij-idea">IDE IntelliJ IDEA</h5>
+<p>Sélectionnez l'entrée du menu <strong>Tools <span class="math inline"><mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="2" style="font-size: 113.1%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c27F6"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false">⟶</mo></math></mjx-assistive-mml></mjx-container></span> Generate Javadoc</strong> ...</p>
+<div>
+   <img src="./sujet_files/E2Capture1-3.png" width="400px">
+   <img src="./sujet_files/E2Capture2-3.png" width="400px">
+</div>
+<div>
+   <img src="./sujet_files/E2Capture3-3.png" width="400px">
+</div>
+<h4 class="activite" id="génération-dune-archive">Génération d'une archive</h4>
+<p>Générez une archive <code>.zip</code> correspondant à votre projet. L'archive devra porter comme nom <code>labyrinthe_etape2.zip</code> et devra contenir les sources de vos classes et leur documentation.</p>
+<h5 id="ide-eclipse-1">IDE Eclipse</h5>
+<p>Après avoir cliqué sur votre projet Java, utilisez l'entrée du menu contextuel <strong>Export</strong> ...</p>
+<div>
+   <img src="./sujet_files/E2Capture1-2.png" width="400px">
+   <img src="./sujet_files/E2Capture2-2.png" width="400px">
+</div>
+<div>
+   <img src="./sujet_files/E2Capture3-2.png" width="400px">
+</div>
+<h5 id="ide-intellij-idea-1">IDE IntelliJ IDEA</h5>
+<p>Après avoir cliqué sur votre projet Java, utilisez l'entrée du menu contextuel <strong>File</strong> ...</p>
+<div>
+   <img src="./sujet_files/E2Capture1-4.png" width="400px">
+   <img src="./sujet_files/E2Capture2-4.png" width="400px">
+</div>
+<h3 class="a-rendre" id="travail-à-rendre-1">Travail à rendre</h3>
+<p>Sous Moodle, dans la section Projet Tutoré S2.</p>
+<blockquote>
+<p><strong>Rappel</strong> : un seul étudiant par groupe effectue les dépôts du début à la fin du projet.</p>
+</blockquote>
+<ol>
+<li>Dans le dépôt <strong>Etape2</strong> :
+<ul>
+<li>Déposez le fichier <code>labyrinthe_etape2.zip</code>.</li>
+<li>Avant le <strong>mercredi 12 mai 2021 (23h)</strong>.</li>
+</ul></li>
+</ol>
+</div>
+</div>
+</section>
+<section id="étape-3-implémentation-des-objets-et-du-plateau-de-jeu" class="container">
+<h2>Étape 3 : Implémentation des objets et du plateau de jeu</h2>
+<div class="row">
+<div class="col">
+<h3 id="contexte-2">Contexte</h3>
+<p>Nous poursuivons le développement des différents composants du jeu.</p>
+<h3 id="objectifs-2">Objectifs</h3>
+<p>L'étape 3 du projet a comme objectif principal l'implémentation de classes représentant les objets du jeu ainsi que le plateau.</p>
+<h3 id="activités-2">Activités</h3>
+<h4 class="activite" id="la-classe-objet">La classe <code>Objet</code></h4>
+<p>Dans votre projet Java Labyrinthe, ajoutez la classe <a href="https://www.cril.univ-artois.fr/~hemery/enseignement/An20-21/projetTutS2/data/Objet.java"><code>Objet.java</code></a> au paquetage <code>composants</code>. La classe <code>Objet</code> permet de représenter les différents objets du jeu. En examinant la classe <code>Objet</code> vous remarquerez que chaque objet possède trois attributs :</p>
+<ul>
+<li><code>numObjet</code>, le numéro de l'objet représenté par un entier compris entre 0 et 17,</li>
+<li><code>posLignePlateau</code> et <code>posColonnePlateau</code>, deux entiers compris entre -1 et 6 qui indiquent la ligne et la colonne de la position de l'objet sur la grille et</li>
+<li><code>surPlateau</code> un booléen indiquant si l'objet est sur le plateau (<code>true</code>) ou non (<code>false</code>). Par convention, un objet qui n'est pas sur le plateau a comme valeur -1 pour sa position de ligne et sa position de colonne sur la grille.</li>
+</ul>
+<p>Pour cette première activité vous devez compléter la classe <code>Objet</code>. Notez que la méthode <code>Objet.nouveauxObjets</code> peut être facilement implémentée à l'aide de la méthode <code>Utils.genereTabIntAleatoirement</code>.</p>
+<p>Exécutez la classe <code>Objet</code> une fois qu'elle est complétée et testez ses méthodes. À titre d'exemple, voici une trace d'affichage possible produite par son exécution :</p>
+<pre class="{.} language-text"><code class=" language-text">*** Génération et affichage des 18 objets ... ***
+Objet [numObjet=0, posLignePlateau=3, posColonnePlateau=5, surPlateau=true]
+Objet [numObjet=1, posLignePlateau=3, posColonnePlateau=6, surPlateau=true]
+Objet [numObjet=2, posLignePlateau=6, posColonnePlateau=0, surPlateau=true]
+…
+Objet [numObjet=16, posLignePlateau=3, posColonnePlateau=4, surPlateau=true]
+Objet [numObjet=17, posLignePlateau=2, posColonnePlateau=5, surPlateau=true]
+*** On enlève les 18 objets du plateau ... ***
+*** On affiche de nouveau les 18 objets ... ***
+Objet [numObjet=0, posLignePlateau=-1, posColonnePlateau=-1, surPlateau=false]
+Objet [numObjet=1, posLignePlateau=-1, posColonnePlateau=-1, surPlateau=false]
+Objet [numObjet=2, posLignePlateau=-1, posColonnePlateau=-1, surPlateau=false]
+…
+Objet [numObjet=16, posLignePlateau=-1, posColonnePlateau=-1, surPlateau=false]
+Objet [numObjet=17, posLignePlateau=-1, posColonnePlateau=-1, surPlateau=false]</code></pre>
+<h4 class="activite" id="utilisation-de-la-classe-objet-dans-lenvironnement-graphique">Utilisation de la classe Objet dans l'environnement graphique</h4>
+<p>Nous allons maintenant tester la classe <code>Objet</code> avec la librairie graphique. Dans le paquetage <code>tests</code>, créez une nouvelle classe appelée <code>TestObjet</code>.</p>
+<p>La méthode <code>main</code> sera la seule méthode présente dans cette classe.</p>
+<p>Son exécution permettra l'affichage des 18 objets placés aléatoirement sur le plateau de jeu. Ces objets auront été générés à partir de la méthode <code>Objet.nouveauxObjets</code>.</p>
+<div>
+<img src="./sujet_files/E3Capture1.png" width="600px">
+</div>
+<h4 class="activite" id="la-classe-plateau">La classe <code>Plateau</code></h4>
+<p>Dans votre projet Java <strong>Labyrinthe</strong>, ajoutez la classe <a href="https://www.cril.univ-artois.fr/~hemery/enseignement/An20-21/projetTutS2/data/Plateau.java"><code>Plateau.java</code></a> au paquetage <code>composants</code>. La classe <code>Plateau</code> permet de représenter le plateau du jeu, une grille de 7 lignes sur 7 colonnes sur laquelle sont posées 49 pièces.</p>
+<p>Chaque objet de la classe <code>Plateau</code> n'a qu'un seul attribut :</p>
+<ul>
+<li><code>Piece plateau[][]</code>.</li>
+</ul>
+<p>Ce tableau à deux dimensions permet de stocker les pièces présentes sur le plateau. L'élément <code>plateau[lig][col]</code> avec</p>
+<ul>
+<li><code>lig</code> représente un numéro de ligne (compris entre 0 et 6) et</li>
+<li><code>col</code> représente un numéro de colonne (compris entre 0 et 6)</li>
+</ul>
+<p>correspond à la pièce se trouvant sur la ligne <code>lig</code> et la colonne <code>col</code> du plateau.</p>
+<p>Cet attribut sera initialisé par un tableau de dimension 2 de taille <code>7x7</code> ne contenant que la valeur <code>null</code>.</p>
+<p>Dans cette activité vous devez compléter la classe <code>Plateau</code>.</p>
+<p>La méthode <code>calculeChemin</code> :</p>
+<pre class="{.} language-java"><code class=" language-java"><span class="token keyword keyword-public">public</span> <span class="token keyword keyword-int">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">calculeChemin</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> posLigCaseDep<span class="token punctuation">,</span><span class="token keyword keyword-int">int</span> posColCaseDep<span class="token punctuation">,</span><span class="token keyword keyword-int">int</span> posLigCaseArr<span class="token punctuation">,</span><span class="token keyword keyword-int">int</span> posColCaseArr<span class="token punctuation">)</span> </code></pre>
+<p>est certainement la méthode la plus difficile à implémenter de la classe <code>Plateau</code>.</p>
+<p>Elle permet de calculer et de retourner un chemin entre deux cases du plateau (pouvant être les mêmes) :</p>
+<ul>
+<li>une case de départ dont la position est spécifiée par la ligne <code>posLigCaseDep</code> et la colonne <code>posColCaseDep</code> et</li>
+<li>une case d'arrivée dont la position est spécifiée par la ligne <code>posLigCaseArr</code> et la colonne <code>posColCaseArr</code>.</li>
+</ul>
+<p>La case de départ et la case d'arrivée peuvent être les mêmes.</p>
+<ul>
+<li>Dans le cas où un chemin n'existe pas, la valeur <code>null</code> est retournée.</li>
+<li>Dans le cas contraire, un tableau à deux dimensions contenant les positions des différentes cases parcourues correspondant au chemin est retourné. Si la variable <code>chemin</code> contient ce tableau alors <code>chemin[i][0]</code> et <code>chemin[i][1]</code> correspond respectivement à la ligne et à la colonne de l'ième case à emprunter dans le chemin.</li>
+</ul>
+<p>Considérons le chemin entre les cases <code>(3,3)</code> et <code>(4,0)</code> :</p>
+<pre class="{.} language-text"><code class=" language-text">(3,3),(2,3),(2,2),(3,2),(4,2),(4,1),(4,0)</code></pre>
+<p>représenté sur la capture d'écran suivante.</p>
+<div>
+<img src="./sujet_files/E3Capture2.png" width="600px">
+</div>
+<p>La méthode <code>calculeChemin</code> retournera ce chemin sous la forme du tableau à deux dimensions suivant :</p>
+<pre class="{.} language-java"><code class=" language-java"><span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">}</span><span class="token punctuation">}</span></code></pre>
+<p>Notez que la méthode <code>passageEntreCases</code> peut être utilisée pour implémenter la méthode <code>calculeChemin</code>.</p>
+<h4 class="activite" id="tester-la-classe-plateau">Tester la classe <code>Plateau</code></h4>
+<p>Nous allons maintenant tester la classe <code>Plateau</code>. Dans le paquetage <code>tests</code> créez une nouvelle classe appelée <code>TestPlateau</code>.</p>
+<p>La méthode <code>main</code> sera la seule méthode présente dans cette classe.</p>
+<p>Son exécution permettra les affichages/actions suivantes :</p>
+<ol>
+<li><p>Dans un premier temps, les paramètres du jeu seront saisis. Dans la suite nous supposerons que les paramètres par défaut ont été saisis par l'utilisateur.</p>
+<p>Une fois les paramètres saisis, le programme ouvrira la fenêtre de jeu avec une configuration initiale correspondant à un affichage par défaut sauf pour le message affiché qui sera "Cliquez pour continuer ...".</p>
+<p>Le programme attend un clic de souris de l'utilisateur.</p>
+<div>
+<img src="./sujet_files/E3Capture3.png" width="600px">
+</div></li>
+<li><p>Le programme crée un plateau avec des pièces ainsi que la pièce hors plateau avec les instructions suivantes :</p>
+<pre class="{.} language-java"><code class=" language-java"><span class="token class-name">Plateau</span> plateau<span class="token operator">=</span><span class="token keyword keyword-new">new</span> <span class="token class-name">Plateau</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">Piece</span> pieceHorsPlateau<span class="token operator">=</span>plateau<span class="token punctuation">.</span><span class="token function">placerPiecesAleatoierment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>Après un clic de l'utilisateur, la fenêtre de jeu est modifiée et affiche le plateau avec ses pièces et la pièce hors plateau créés précédemment.</p>
+<p>Le programme attend un nouveau clic de souris de l'utilisateur.</p>
+<div>
+<img src="./sujet_files/E3Capture4.png" width="600px">
+</div></li>
+<li><p>Après le clic de l'utilisateur, l'ensemble des chemins entre la case <code>(3,3)</code> et les différentes cases du plateau seront calculés.</p>
+<p>Ces chemins devront être affichés dans la Console. S'il n'y a pas de chemin entre la case <code>(3,3)</code> et une autre case donnée, on n'affiche rien.</p>
+<p>D'autre part, parmi les chemins calculés, le chemin de plus grande longueur (ou l'un d'eux en cas d'égalité de longueur) sera affiché dans la fenêtre de jeu à l'aide de billes de type 2. Le programme attend un nouveau clic de souris de l'utilisateur et s'arrête.</p>
+<div>
+<img src="./sujet_files/E3Capture5.png" width="600px">
+</div>
+<p>L'affichage dans la Console sera similaire à cet affichage :</p>
+<pre class="{.} language-text"><code class=" language-text">La liste des chemins trouvés à partir de la case (3,3) :
+
+Chemin entre les cases (3,3) et (3,2) : (3,3)(3,2)
+Chemin entre les cases (3,3) et (3,3) : (3,3)
+Chemin entre les cases (3,3) et (3,4) : (3,3)(3,4)
+Chemin entre les cases (3,3) et (3,5) : (3,3)(3,4)(4,4)(4,5)(3,5)
+Chemin entre les cases (3,3) et (4,4) : (3,3)(3,4)(4,4)
+Chemin entre les cases (3,3) et (4,5) : (3,3)(3,4)(4,4)(4,5)
+Chemin entre les cases (3,3) et (5,4) : (3,3)(3,4)(4,4)(5,4)</code></pre></li>
+</ol>
+<h4 class="activite" id="génération-de-la-documentation-html-1">Génération de la documentation HTML</h4>
+<p>Générez la documentation HTML des classes de votre projet <strong>Labyrinthe</strong> à l'aide de l'utilitaire Javadoc.</p>
+<h4 class="activite" id="génération-dune-archive-1">Génération d'une archive</h4>
+<p>Générez une archive <code>.zip</code> correspondant à votre projet. L'archive devra porter comme nom <code>labyrinthe_etape3.zip</code> et devra contenir les sources de vos classes et leur documentation.</p>
+<h3 class="a-rendre" id="travail-à-rendre-2">Travail à rendre</h3>
+<p>Sous Moodle, dans la section Projet Tutoré S2.</p>
+<blockquote>
+<p><strong>Rappel</strong> : un seul étudiant par groupe effectue les dépôts du début à la fin du projet.</p>
+</blockquote>
+<ol>
+<li>Dans le dépôt <strong>Etape3</strong> :
+<ul>
+<li>Déposez le fichier <code>labyrinthe_etape3.zip</code>.</li>
+<li>Avant le <strong>mercredi 19 mai 2021 (23h)</strong>.</li>
+</ul></li>
+</ol>
+</div>
+</div>
+</section>
+<section id="étape-4-implémentation-de-la-classe-joueur" class="container">
+<h2>Étape 4 : Implémentation de la classe <code>Joueur</code></h2>
+<div class="row">
+<div class="col">
+<h3 id="contexte-3">Contexte</h3>
+<p>Les composants "physiques" du jeu ont été précédemment développés : les objets, les pièces et le plateau. Nous poursuivons le développement du jeu en considérant les joueurs et les éléments constituant une partie du jeu.</p>
+<h3 id="objectifs-3">Objectifs</h3>
+<p>L'étape 4 du projet a comme objectif principal l'implémentation de la classe représentant les joueurs (la classe <code>Joueur</code>).</p>
+<h3 id="activités-3">Activités</h3>
+<h4 class="activite" id="récupération-du-code-de-départ">Récupération du code de départ</h4>
+<p>Dans votre projet Java <strong>Labyrinthe</strong>, créez les deux paquetages <code>joueurs</code> et <code>partie</code>. Copiez les fichiers :</p>
+<ul>
+<li><a href="https://www.cril.univ-artois.fr/~hemery/enseignement/An20-21/projetTutS2/data/Joueur.java"><code>Joueur.java</code></a>,</li>
+<li><a href="https://www.cril.univ-artois.fr/~hemery/enseignement/An20-21/projetTutS2/data/JoueurHumain.java"><code>JoueurHumain.java</code></a>,</li>
+<li><a href="https://www.cril.univ-artois.fr/~hemery/enseignement/An20-21/projetTutS2/data/JoueurOrdinateur.java"><code>JoueurOrdinateur.java</code></a>,</li>
+<li><a href="https://www.cril.univ-artois.fr/~hemery/enseignement/An20-21/projetTutS2/data/JoueurOrdinateurT0.java"><code>JoueurOrdinateurT0.java</code></a>,</li>
+<li><a href="https://www.cril.univ-artois.fr/~hemery/enseignement/An20-21/projetTutS2/data/JoueurOrdinateurT1.java"><code>JoueurOrdinateurT1.java</code></a>,</li>
+<li><a href="https://www.cril.univ-artois.fr/~hemery/enseignement/An20-21/projetTutS2/data/JoueurOrdinateurT2.java"><code>JoueurOrdinateurT2.java</code></a> et</li>
+<li><a href="https://www.cril.univ-artois.fr/~hemery/enseignement/An20-21/projetTutS2/data/JoueurOrdinateurT3.java"><code>JoueurOrdinateurT3.java</code></a> dans le paquetage <code>joueurs</code>.</li>
+</ul>
+<p>Copiez le fichier <a href="https://www.cril.univ-artois.fr/~hemery/enseignement/An20-21/projetTutS2/data/ElementsPartie.java"><code>ElementsPartie.java</code></a> dans le paquetage <code>partie</code>.</p>
+<p>Examinez le contenu de ces différentes classes. Notez qu'à cette étape (l'étape 4), vous modifierez uniquement la classe <code>Joueur</code>.</p>
+<h4 class="activite" id="implémentation-de-la-classe-joueur">Implémentation de la classe <code>Joueur</code></h4>
+<p>Complétez la classe <code>Joueur</code>.</p>
+<h4 class="activite" id="test-de-la-classe-joueur">Test de la classe <code>Joueur</code></h4>
+<p>Nous allons maintenant tester la classe <code>Joueur</code>.</p>
+<p>Dans le paquetage <code>tests</code> créez une nouvelle classe appelée <code>TestJoueur</code>.</p>
+<p>La méthode main sera la seule méthode présente dans cette classe.</p>
+<p>Son exécution permettra les affichages/actions suivantes :</p>
+<ol>
+<li><p>Dans un premier temps, les paramètres du jeu seront saisis par l'utilisateur.</p>
+<div>
+   <img src="./sujet_files/E4Capture1.png" width="400px">
+   <img src="./sujet_files/E4Capture2.png" width="400px">
+</div></li>
+<li><p>Le programme crée un plateau avec des pièces ainsi que la pièce hors plateau avec les instructions suivantes :</p>
+<pre class="{.} language-java"><code class=" language-java"><span class="token class-name">Plateau</span> plateau<span class="token operator">=</span><span class="token keyword keyword-new">new</span> <span class="token class-name">Plateau</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">Piece</span> pieceHorsPlateau<span class="token operator">=</span>plateau<span class="token punctuation">.</span><span class="token function">placerPiecesAleatoierment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>Il initialise également les joueurs avec l'instruction suivante :</p>
+<pre class="{.} language-java"><code class=" language-java"><span class="token class-name">Joueur</span> joueurs<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token class-name">Joueur</span><span class="token punctuation">.</span><span class="token function">nouveauxJoueurs</span><span class="token punctuation">(</span>parametresJeu<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>Après cela, la fenêtre de jeu s'ouvre avec</p>
+<ul>
+<li>Les noms (la catégorie du joueur sera ajoutée entre parenthèses) initialisés et les images représentant les joueurs.</li>
+<li>Les joueurs placés à leur position initiale.</li>
+</ul>
+<p>Notez que les différents joueurs (initialisés avec ces informations) devront être générés à partir de la méthode <code>Joueur.nouveauxJoueurs</code>. Un message "Cliquez pour continuer ..." est affiché.</p>
+<p>Une fois la fenêtre de jeu ouverte le programme attend un clic de souris avant de poursuivre.</p>
+<div>
+   <img src="./sujet_files/E4Capture3.png" width="400px">
+</div></li>
+<li><p>Après le clic de l'utilisateur, les joueurs se déplacent à tour de rôle (le premier joueur, puis le deuxième, puis l'éventuel troisième joueur).</p>
+<p>Pour cela, pour un joueur donné, la nouvelle position du joueur est récupérée à l'aide d'un appel de la méthode <code>choisirCaseArrivee</code> (avec null comme paramètre).</p>
+<p>Dans le cas où il n'existe pas de chemin entre la case du joueur et la case d'arrivée, la saisie de la case d'arrivée est redemandée jusqu'à ce qu'un chemin existe.</p>
+<p>Étant donné l'état de développement du jeu, vous noterez qu'un joueur ordinateur choisira systématiquement la case où il se trouve comme case d'arrivée (voir la classe <code>JoueurOrdinateur</code>).</p>
+<p>Après le choix de la case d'arrivée, le chemin entre la case de départ et la case d'arrivée est affiché.</p>
+<p>Un message du type "<em>Au tour de <nomjoueur></nomjoueur></em>", "<em>Sélectionner une case ...</em>" est affiché lorsque c'est au tour d'un joueur de bouger.</p>
+<p>Une fois que les joueurs ont tous bougé, le programme attend un clic de souris.</p>
+<p>Les captures d'écrans suivantes correspondent à un exemple de déroulement de ce traitement :</p>
+<div>
+   <img src="./sujet_files/E4Capture4.png" width="400px">
+   <img src="./sujet_files/E4Capture5.png" width="400px">
+</div>
+<div>
+   <img src="./sujet_files/E4Capture6.png" width="400px">
+</div></li>
+</ol>
+<h4 class="activite" id="génération-de-la-documentation-html-2">Génération de la documentation HTML</h4>
+<p>Générez la documentation HTML des classes de votre projet <strong>Labyrinthe</strong> à l'aide de l'utilitaire Javadoc.</p>
+<h4 class="activite" id="génération-dun-diagramme-de-classes">Génération d'un diagramme de classes</h4>
+<p>Pour cette activité vous devez créer le diagramme de classes (par Rétro-ingénierie/reverse-engineering) des différentes classes de votre projet <strong>Labyrinthe</strong>.</p>
+<p>Pour se faire, vous utiliserez un outil de votre environnement de programmation.</p>
+<h5 id="eclipse">Eclipse</h5>
+<p>Vous pouvez installer et utiliser l'outil <em>ObjectAid</em> (voir le site du logiciel).</p>
+<div>
+      <img src="./sujet_files/diagrammeClassesEtape4.png" width="850px">
+   </div>
+<h5 id="intellij-idea">IntelliJ IDEA</h5>
+<p>À partir du répertoire <code>src</code> et cliquez sur le bouton de droite de la souris</p>
+<div>
+   <img src="./sujet_files/E4Capture1-1.png" width="250px">
+   <img src="./sujet_files/E4Capture2-1.png" width="250px">
+   <img src="./sujet_files/E4Capture3-1.png" width="250px">
+</div>
+<p>Un diagramme de classes UML devra être sauvegardé au format <code>.png</code> dans un fichier appelé <code>diagrammeClassesEtape4.png</code>. Ce fichier se trouvera dans un nouveau dossier de votre projet appelé <code>diagrammes</code>.</p>
+<h4 class="activite" id="génération-dune-archive-2">Génération d'une archive</h4>
+<p>Générez une archive <code>.zip</code> correspondant à votre projet.</p>
+<p>L'archive doit porter comme nom <code>labyrinthe_etape4.zip</code> et doit contenir les sources de vos classes (le dossier <code>src</code>), leur documentation (le dossier <code>doc</code>) et le diagramme de classes (dossier <code>diagrammes</code>).</p>
+<h3 class="a-rendre" id="travail-à-rendre-3">Travail à rendre</h3>
+<p>Sous Moodle, dans la section Projet Tutoré S2.</p>
+<blockquote>
+<p><strong>Rappel</strong> : un seul étudiant par groupe effectue les dépôts du début à la fin du projet.</p>
+</blockquote>
+<ol>
+<li>Dans le dépôt <strong>Etape4</strong> :
+<ul>
+<li>Déposez le fichier <code>labyrinthe_etape4.zip</code>.</li>
+<li>Avant le <strong>mercredi 26 mai 2021 (23h)</strong>.</li>
+</ul></li>
+</ol>
+</div>
+</div>
+</section>
+<section id="étape-5-implémentation-dune-première-version-du-jeu" class="container">
+<h2>Étape 5 : Implémentation d'une première version du jeu !</h2>
+<div class="row">
+<div class="col">
+<h3 id="contexte-4">Contexte</h3>
+<p>Nous poursuivons le développement du jeu en considérant les éléments constituant une partie du jeu (les classes <code>ElementsPartie</code> et <code>Partie</code>) afin d'obtenir une première version jouable du jeu <strong>Labyrinthe</strong>.</p>
+<h3 id="objectif">Objectif</h3>
+<p>L'étape 5 du projet a comme objectif principal l'implémentation des classes <code>ElementsPartie</code> et <code>Partie</code> représentant respectivement l'ensemble des éléments constituant une partie et une partie.</p>
+<h3 id="activités-4">Activités</h3>
+<h4 class="activite" id="récupération-du-code-de-départ-1">Récupération du code de départ</h4>
+<p>Ajoutez le fichier <a href="https://www.cril.univ-artois.fr/~hemery/enseignement/An20-21/projetTutS2/data/Partie.java"><code>Partie.java</code></a> au paquetage <code>partie</code>.</p>
+<h4 class="activite" id="code-à-ajouter">Code à ajouter</h4>
+<p>Complétez la classe <code>ElementsPartie</code>.</p>
+<h4 class="activite" id="tester-le-code">Tester le code</h4>
+<p>Nous allons maintenant tester la classe <code>ElementsPartie</code>. Dans le paquetage <code>tests</code> créez une nouvelle classe appelée <code>TestElementsPartie</code>.</p>
+<p>La méthode <code>main</code> sera la seule méthode présente dans cette classe.</p>
+<p>Son exécution permet les affichages/actions suivants :</p>
+<ol>
+<li><p>Dans un premier temps, les paramètres du jeu seront saisis par l'utilisateur.</p>
+<div>
+   <img src="./sujet_files/E5Capture1.png" width="400px">
+   <img src="./sujet_files/E5Capture2.png" width="400px">
+</div></li>
+<li><p>Puis, le programme crée les éléments d'une partie avec les instructions suivantes :</p>
+<pre class="{.} language-java"><code class=" language-java"><span class="token class-name">Object</span> parametresJeu<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+parametresJeu<span class="token operator">=</span>IG<span class="token punctuation">.</span><span class="token function">saisirParametres</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-int">int</span>  nbJoueurs<span class="token operator">=</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token class-name">Integer</span><span class="token punctuation">)</span>parametresJeu<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">intValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+IG<span class="token punctuation">.</span><span class="token function">creerFenetreJeu</span><span class="token punctuation">(</span><span class="token string">"- TestElementsPartie"</span><span class="token punctuation">,</span>nbJoueurs<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">Joueur</span> joueurs<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token class-name">Joueur</span><span class="token punctuation">.</span><span class="token function">nouveauxJoueurs</span><span class="token punctuation">(</span>parametresJeu<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">ElementsPartie</span> elementsPartie<span class="token operator">=</span><span class="token keyword keyword-new">new</span> <span class="token class-name">ElementsPartie</span><span class="token punctuation">(</span>joueurs<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>Après cela, la fenêtre de jeu s'ouvre avec l'ensemble des éléments (les pièces, les objets et les joueurs) affichés comme pour un début de partie.</p>
+<p>La catégorie du joueur est ajoutée entre parenthèses après chaque nom. Un message "Cliquez pour continuer ..." est affiché.</p>
+<p>Une fois la fenêtre de jeu ouverte, le programme attend un clic de souris avant de poursuivre.</p>
+<div>
+   <img src="./sujet_files/E5Capture3.png" width="400px">
+</div></li>
+<li><p>Après le clic de l'utilisateur, de manière itérative, quatre saisies d'entrée de plateau seront effectuées (quatre choix d'une flèche). Le message "Choisissez une entrée ..." sera affiché avant chaque saisie.</p>
+<p>Après chaque saisie d'une entrée du plateau, une insertion de la pièce libre à l'endroit sélectionné est réalisée (utilisation de la méthode <code>insertionPieceLibre</code> de la classe <code>ElementsPartie</code>). L'affichage devra être mis à jour après cette insertion.</p>
+<p>Après les quatre itérations, le message "C'est terminé ! ", "Cliquer pour quitter ...".</p>
+<p>Puis après un clic de l'utilisateur le programme s'arrête.</p>
+<div>
+   <img src="./sujet_files/E5Capture4.png" width="400px">
+   <img src="./sujet_files/E5Capture5.png" width="400px">
+</div>
+<div>
+   <img src="./sujet_files/E5Capture6.png" width="400px">
+   <img src="./sujet_files/E5Capture7.png" width="400px">
+</div>
+<div>
+   <img src="./sujet_files/E5Capture8.png" width="400px">
+</div></li>
+</ol>
+<h4 class="activite" id="code-à-ajouter-1">Code à ajouter</h4>
+<p>Complétez la classe <code>Partie</code> afin de réaliser une première version du jeu.</p>
+<h4 class="activite" id="génération-de-la-documentation-html-3">Génération de la documentation HTML</h4>
+<p>Générez la documentation HTML des classes de votre projet <strong>Labyrinthe</strong> à l'aide de l'utilitaire Javadoc.</p>
+<h4 class="activite" id="génération-dun-diagramme-de-classes-1">Génération d'un diagramme de classes</h4>
+<p>Réalisez le diagramme de classes au format <code>.png</code> dans un fichier appelé <code>diagrammeClassesEtape5.png</code>. Ce fichier sera mis dans le dossier de votre projet appelé <code>diagrammes</code>.</p>
+<div>
+   <img src="./sujet_files/diagrammeClassesEtape5.png" width="850px">
+</div>
+<h4 class="activite" id="génération-dune-archive-3">Génération d'une archive</h4>
+<p>Générez une archive <code>.zip</code> correspondant à votre projet. L'archive devra porter comme nom <code>labyrinthe_etape5.zip</code> et devra contenir les sources de vos classes (le dossier <code>src</code>), leur documentation (le dossier <code>doc</code>) et les diagrammes de classes (dossier <code>diagrammes</code>).</p>
+<h3 class="a-rendre" id="travail-à-rendre-4">Travail à rendre</h3>
+<p>Sous Moodle, dans la section Projet Tutoré S2.</p>
+<blockquote>
+<p><strong>Rappel</strong> : un seul étudiant par groupe effectue les dépôts du début à la fin du projet.</p>
+</blockquote>
+<ol>
+<li>Dans le dépôt <strong>Etape5</strong> :
+<ul>
+<li>Déposez le fichier <code>labyrinthe_etape5.zip</code>.</li>
+<li>Avant le <strong>mercredi 2 juin 2021 (23h)</strong>.</li>
+</ul></li>
+</ol>
+</div>
+</div>
+</section>
+<section id="étape-6-développement-de-joueurs-ordinateur" class="container">
+<h2>Étape 6 : Développement de joueurs "<em>ordinateur</em>"</h2>
+<div class="row">
+<div class="col">
+<h3 id="contexte-5">Contexte</h3>
+<p>Nous finalisons le développement du jeu en considérant les joueurs de type <em>ordinateur</em>.</p>
+<h3 id="objectif-1">Objectif</h3>
+<p>L'étape 6 du projet a comme objectif principal l'implémentation de joueurs de type <em>ordinateur</em> moins basiques que les joueurs de type <em>ordinateur</em> génériques.</p>
+<h3 id="activités-5">Activités</h3>
+<h4 id="modification-des-classes-joueurordinateur-génériques">Modification des classes <code>JoueurOrdinateur</code> génériques</h4>
+<p>Modifiez les classes :</p>
+<ul>
+<li><code>JoueurOrdinateurT1</code>,</li>
+<li><code>JoueurOrdinateurT2</code> et</li>
+<li><code>JoueurOrdinateurT3</code></li>
+</ul>
+<p>afin d'obtenir des joueurs de type <em>ordinateur</em> plus sophistiqués que les joueurs de type <em>ordinateur</em> actuels.</p>
+<p>Différentes stratégies de jeu seront implantées.</p>
+<h4 class="activite" id="génération-dune-archive-4">Génération d'une archive</h4>
+<p>Générez une archive <code>.zip</code> correspondant à votre projet. L'archive devra porter comme nom <code>labyrinthe_etape6.zip</code> et devra contenir les sources de vos classes (le dossier <code>src</code>), leur documentation (le dossier <code>doc</code>) et les diagrammes de classes (dossier <code>diagrammes</code>).</p>
+<h3 class="a-rendre" id="travail-à-rendre-5">Travail à rendre</h3>
+<p>Sous Moodle, dans la section Projet Tutoré S2.</p>
+<blockquote>
+<p><strong>Rappel</strong> : un seul étudiant par groupe effectue les dépôts du début à la fin du projet.</p>
+</blockquote>
+<ol>
+<li>Dans le dépôt <strong>Etape6</strong> :
+<ul>
+<li>Déposez le fichier <code>labyrinthe_etape6.zip</code>.</li>
+<li>Avant le <strong>mercredi 9 juin 2021 (23h)</strong>.</li>
+</ul></li>
+</ol>
+</div>
+</div>
+</section>
+<section id="rendus" class="container">
+<h2>Rendus</h2>
+<div class="row">
+<div class="col">
+<h3 id="le-rapport-de-projet">Le rapport de projet</h3>
+<p>Vous devez produire un rapport de projet de 10 pages maximum, annexes comprises. Ce rapport devra suivre le format qui vous a été présenté dans le module de communication.</p>
+<p>De plus il devra contenir les sections suivantes :</p>
+<ul>
+<li>Explications et détails de certains algorithmes
+<ul>
+<li>L'algorithme du tirage aléatoire de valeurs entières</li>
+<li>L'algorithme de recherche de chemins</li>
+<li>L'algorithme de la boucle principale</li>
+</ul></li>
+<li>Comment les modules de POO et COO ont été utilisés</li>
+<li>Répartition du travail entre les membres du groupe</li>
+<li>Retour d'expérience
+<ul>
+<li>global : sujet, langage, outils, contexte, intérêt, difficultés, ...</li>
+<li>personnel (une section par membre du groupe).</li>
+</ul></li>
+</ul>
+<p>Le rapport est à déposer sous Moodle, dans la section Projet Tutoré S2.</p>
+<blockquote>
+<p><strong>Rappel</strong> : un seul étudiant par groupe effectue les dépôts du début à la fin du projet.</p>
+</blockquote>
+<ol>
+<li>Dans le dépôt <strong>Rapport</strong> :
+<ul>
+<li>Déposez le fichier <code>labyrinthe_rapport_nomEquipe.pdf</code>.</li>
+<li>Avant le <strong>lundi 14 juin 2021 (23h)</strong>.</li>
+</ul></li>
+</ol>
+<h3 id="soutenance-de-projet">Soutenance de projet</h3>
+<p>Les soutenances du projet sont prévues le mercredi 16 juin prochain à partir de 14h30.</p>
+</div>
+</div>
+</section></div>
+        <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <ul class="section-nav">
+                <li class="toc-entry"><ul>
+<li><a href="https://www.cril.univ-artois.fr/~hemery/enseignement/An20-21/projetTutS2/#introduction">Introduction</a></li>
+<li><a href="https://www.cril.univ-artois.fr/~hemery/enseignement/An20-21/projetTutS2/#sujet">Sujet</a></li>
+<li><a href="https://www.cril.univ-artois.fr/~hemery/enseignement/An20-21/projetTutS2/#prologue-d%C3%A9veloppement">Prologue Développement</a></li>
+<li><a href="https://www.cril.univ-artois.fr/~hemery/enseignement/An20-21/projetTutS2/#etape-1-prise-en-main-de-la-librairie-graphique">Etape 1 : Prise en main de la librairie graphique</a></li>
+<li><a href="https://www.cril.univ-artois.fr/~hemery/enseignement/An20-21/projetTutS2/#%C3%A9tape-2-impl%C3%A9mentation-des-pi%C3%A8ces-du-jeu">Étape 2 : Implémentation des pièces du jeu</a></li>
+<li><a href="https://www.cril.univ-artois.fr/~hemery/enseignement/An20-21/projetTutS2/#%C3%A9tape-3-impl%C3%A9mentation-des-objets-et-du-plateau-de-jeu">Étape 3 : Implémentation des objets et du plateau de jeu</a></li>
+<li><a href="https://www.cril.univ-artois.fr/~hemery/enseignement/An20-21/projetTutS2/#%C3%A9tape-4-impl%C3%A9mentation-de-la-classe-joueur">Étape 4 : Implémentation de la classe <code>Joueur</code></a></li>
+<li><a href="https://www.cril.univ-artois.fr/~hemery/enseignement/An20-21/projetTutS2/#%C3%A9tape-5-impl%C3%A9mentation-dune-premi%C3%A8re-version-du-jeu">Étape 5 : Implémentation d'une première version du jeu !</a></li>
+<li><a href="https://www.cril.univ-artois.fr/~hemery/enseignement/An20-21/projetTutS2/#%C3%A9tape-6-d%C3%A9veloppement-de-joueurs-ordinateur">Étape 6 : Développement de joueurs "<em>ordinateur</em>"</a></li>
+<li><a href="https://www.cril.univ-artois.fr/~hemery/enseignement/An20-21/projetTutS2/#rendus">Rendus</a></li>
+</ul></li>
+            </ul>
+        </div>
+    </div>
+    </div>
+<!-- Add comment hosting service here -->
+<!-- Footer -->
+<footer class="footer text-muted">
+    <div align="center">
+        <!-- Update licences -->
+        Enoncé Projet Tutoré Semestre 2 ― Avril-Juin 2021
+        <br>
+        <!-- Please keep the following line -->
+        Built with <a href="https://www.pandoc.org/" target="_blank" rel="noopener">Pandoc</a>
+        using <a href="https://github.com/ashki23/pandoc-bootstrap" target="_blank" rel="noopener">pandoc-bootstrap</a> theme
+        <br>
+        <!-- Update copyright -->
+        Copyright, Département Informatique - IUT de Lens
+    </div>
+</footer>
+<!-- Add global site tag (gtag.js) and site analytics here -->
+<!-- Prism -->
+<script src="./sujet_files/prism.js.download"></script>
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="./sujet_files/jquery-3.5.1.slim.min.js.download" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="./sujet_files/popper.min.js.download" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="./sujet_files/bootstrap.min.js.download" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<!-- Mathjax -->
+<script src="./sujet_files/polyfill.min.js.download"></script>
+<script id="MathJax-script" async="" src="./sujet_files/tex-mml-chtml.js.download"></script>
+<script>
+    /* Bootstrap styles to tables */
+    function bootstrapStylePandocTables() {
+        $('tr.header').parent('thead').parent('table').addClass('table table-condensed'); }
+    $(document).ready(function () { bootstrapStylePandocTables(); });
+    /* Adjust the height when click the toc */
+    var shiftWindow = function() { scrollBy(0, -60) };
+    window.addEventListener("hashchange", shiftWindow);
+    function load() { if (window.location.hash) shiftWindow(); }
+</script>
+
+
+<script type="text/javascript" src="chrome-extension://fooolghllnmhmmndgjiamiiodkpenpbb/injectedPasswordless.js"></script></body></html>
